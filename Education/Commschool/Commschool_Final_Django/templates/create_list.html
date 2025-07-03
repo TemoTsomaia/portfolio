@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Santa's list</title>
+</head>
+<body>
+
+    <form method="post" action="/santas_list/create_list/">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">create list</button>
+    </form>
+
+</body>
+</html>

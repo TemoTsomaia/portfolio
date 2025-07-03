@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nice List</title>
+</head>
+<body>
+    <h1>Santa's Nice List</h1>
+    
+    {% if nice_kids %}
+        <ul>
+            {% for kid in nice_kids %}
+                <li>Kid ID: {{ kid.id }} - {{ kid.name }} - Niceness Coefficient: {{ kid.niceness_coefficient }} - Gift: {% if kid.toy %}{{ kid.toy.name }} {% else %} To be assigned {% endif %} </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No kids on the nice list.</p>
+    {% endif %}
+</body>
+</html>

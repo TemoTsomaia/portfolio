@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naughty List</title>
+</head>
+<body>
+    <h1>Santa's Naughty List</h1>
+    
+    {% if naughty_kids %}
+        <ul>
+            {% for kid in naughty_kids %}
+                <li>Kid ID: {{ kid.id }} - {{ kid.name }} - Niceness Coefficient: {{ kid.niceness_coefficient }} - Coal: {% if kid.coal %}{{ kid.coal.name }} {% else %} To be assigned {% endif %}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No kids on the naughty list.</p>
+    {% endif %}
+</body>
+</html>

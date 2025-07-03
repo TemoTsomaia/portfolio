@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kid</title>
+</head>
+<body>
+
+ <form method="post" action="/santas_list/create_kid/">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">create kid</button>
+    </form>
+
+
+</body>
+</html>

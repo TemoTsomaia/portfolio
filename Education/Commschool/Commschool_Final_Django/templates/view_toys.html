@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All toys</title>
+</head>
+<body>
+    <h1>All Toys Available</h1>
+
+    {% if toys %}
+        <ul>
+            {% for toy in toys %}
+                <li>Toy ID: {{ toy.id }} - Toy Name: {{ toy.name }} - Time to create: {{ toy.time_to_create }} - The toy is assigned to: {{ toy.kid_toy }}
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No kids found in Santa's list.</p>
+    {% endif %}
+</body>
+</html>

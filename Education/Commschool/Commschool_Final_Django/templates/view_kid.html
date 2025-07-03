@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kid Details</title>
+</head>
+<body>
+    <h1>Details of Kid: {{ kid.name }}</h1>
+    
+    <p>Kid ID: {{ kid.id }}</p>
+    <p>Name: {{ kid.name }}</p>
+    <p>Niceness Coefficient: {{ kid.niceness_coefficient }}</p>
+    <p>Gift: {% if kid.toy %}{{ kid.toy.name }} {% elif kid.coal %}{{ kid.coal.name }} {% else %} To be assigned {% endif %}</p>
+
+</body>
+</html>
